@@ -4,9 +4,10 @@ require("dotenv").config({
 })
 
 const { Pool } = require('pg');
+const psql = "postgres://default:zmkjKA1R4XZO@ep-sweet-truth-20244450.ap-southeast-1.aws.neon.tech:5432/verceldb?sslmode=require"
 
 const pool = new Pool({
-    connectionString: process.env.POSTGRES_URL + "?sslmode=require",
+    connectionString: psql,
 })
 
 pool.connect(undefined)
